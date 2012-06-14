@@ -10,7 +10,7 @@ case ${PV[3]} in
 esac
 SRC_DIR="binutils-${PV%[a-z]}"
 
-PATCH_URI="mirror://sourceforge/mspgcc/${P}-20120125.patch"
+PATCH_URI="mirror://sourceforge/mspgcc/${P}-20120606.patch"
 PATCH_URI+=" config-rpath.patch"
 
 src_install() {

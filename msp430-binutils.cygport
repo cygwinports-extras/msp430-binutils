@@ -2,7 +2,7 @@ TOOLCHAIN_TARGET="msp430"
 inherit toolchain
 
 NAME="msp430-binutils"
-VERSION=2.22-20120911
+VERSION=2.21.1a-20120406
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Binutils for MSP430 embedded toolchain"
@@ -14,13 +14,17 @@ case ${VERSION%-*} in
 	SRC_URI="mirror://sourceware/binutils/snapshots/binutils-${VERSION%-*}.tar.bz2" ;;
 *)	SRC_URI="mirror://gnu/binutils/binutils-${VERSION%-*}.tar.bz2" ;;
 esac
-SRC_DIR="binutils-${VERSION%-*}"
-PATCH_URI="mirror://sourceforge/mspgcc/${NAME}-${VERSION}.patch"
+SRC_DIR="binutils-${VERSION%a-*}"
+PATCH_URI="
+	mirror://sourceforge/mspgcc/${NAME}-${VERSION}.patch
+	2.21.1a-textdomain.patch
+	2.21.1a-Wimplicit-decls.patch
+"
 
 src_install() {
 	cd ${B}
 	cyginstall
 
 	# conflicts with native binutils
-	rm -fr ${D}/usr/lib/ ${D}/usr/share/{info,locale}/
+	rm -fr ${D}/usr/lib/ ${D}/usr/share/info/
 }

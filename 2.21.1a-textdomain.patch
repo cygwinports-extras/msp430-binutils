@@ -1,0 +1,77 @@
+--- origsrc/binutils-2.21.1/bfd/configure	2011-06-27 03:57:12.000000000 -0500
++++ src/binutils-2.21.1/bfd/configure	2013-11-15 01:12:27.121399800 -0600
+@@ -3987,7 +3987,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=bfd
++ PACKAGE=msp430-bfd
+  VERSION=2.21.1
+ 
+ 
+--- origsrc/binutils-2.21.1/binutils/configure	2011-06-27 02:39:09.000000000 -0500
++++ src/binutils-2.21.1/binutils/configure	2013-11-15 01:12:39.388101400 -0600
+@@ -3732,7 +3732,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=binutils
++ PACKAGE=msp430-binutils
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.21.1/gas/configure	2010-11-05 05:33:36.000000000 -0500
++++ src/binutils-2.21.1/gas/configure	2013-11-15 01:12:49.186661900 -0600
+@@ -3721,7 +3721,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=gas
++ PACKAGE=msp430-gas
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.21.1/gold/configure	2011-03-16 03:37:17.000000000 -0500
++++ src/binutils-2.21.1/gold/configure	2013-11-15 01:13:05.022567600 -0600
+@@ -3166,7 +3166,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE='gold'
++ PACKAGE='msp430-gold'
+  VERSION='0.1'
+ 
+ 
+--- origsrc/binutils-2.21.1/gprof/configure	2010-11-05 05:34:01.000000000 -0500
++++ src/binutils-2.21.1/gprof/configure	2013-11-15 01:13:14.459107400 -0600
+@@ -3647,7 +3647,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=gprof
++ PACKAGE=msp430-gprof
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.21.1/ld/configure	2011-03-16 03:37:31.000000000 -0500
++++ src/binutils-2.21.1/ld/configure	2013-11-15 01:13:20.435449200 -0600
+@@ -4049,7 +4049,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=ld
++ PACKAGE=msp430-ld
+  VERSION=${BFD_VERSION}
+ 
+ 
+--- origsrc/binutils-2.21.1/opcodes/configure	2010-11-05 05:32:32.000000000 -0500
++++ src/binutils-2.21.1/opcodes/configure	2013-11-15 01:13:27.740867100 -0600
+@@ -3716,7 +3716,7 @@ fi
+ 
+ 
+ # Define the identity of the package.
+- PACKAGE=opcodes
++ PACKAGE=msp430-opcodes
+  VERSION=${BFD_VERSION}
+ 
+ 

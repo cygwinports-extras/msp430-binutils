@@ -2,20 +2,20 @@ TOOLCHAIN_TARGET="msp430"
 inherit toolchain
 
 NAME="msp430-binutils"
-VERSION=2.22
+VERSION=2.22-20120911
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Binutils for MSP430 embedded toolchain"
 DESCRIPTION="This directory contains various GNU compilers, assemblers, linkers,
 debuggers, etc., plus their support routines, definitions, and documentation."
 HOMEPAGE="http://www.gnu.org/software/binutils/"
-case ${VERSION} in
+case ${VERSION%-*} in
 *.*.[5-9][0-9])
-	SRC_URI="mirror://sourceware/binutils/snapshots/binutils-${VERSION}.tar.bz2" ;;
-*)	SRC_URI="mirror://gnu/binutils/binutils-${VERSION}.tar.bz2" ;;
+	SRC_URI="mirror://sourceware/binutils/snapshots/binutils-${VERSION%-*}.tar.bz2" ;;
+*)	SRC_URI="mirror://gnu/binutils/binutils-${VERSION%-*}.tar.bz2" ;;
 esac
-SRC_DIR="binutils-${VERSION%[a-z]}"
-PATCH_URI="mirror://sourceforge/mspgcc/${NAME}-${VERSION}-20120606.patch"
+SRC_DIR="binutils-${VERSION%-*}"
+PATCH_URI="mirror://sourceforge/mspgcc/${NAME}-${VERSION}.patch"
 
 src_install() {
 	cd ${B}

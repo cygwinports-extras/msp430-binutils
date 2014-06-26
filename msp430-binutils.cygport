@@ -17,6 +17,7 @@ esac
 SRC_DIR="binutils-${VERSION%a-*}"
 PATCH_URI="
 	mirror://sourceforge/mspgcc/${NAME}-${VERSION}.patch
+	http://pkgs.fedoraproject.org/cgit/msp430-binutils.git/plain/texinfo-5-fixes.patch#/binutils-2.21.1a-texinfo5.patch
 	2.21.1a-textdomain.patch
 	2.21.1a-Wimplicit-decls.patch
 "
